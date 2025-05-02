@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home Page</title>
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Monospace", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: white;
+  scroll-behavior: smooth;
+  position: relative;
+  z-index: 1;
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+
+.overlay,
+.content-section,
+.contact-section {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-section {
+  height: 100vh;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.animated-text {
+  font-size: 48px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slideIn 2s ease-in-out;
+}
+
+.sub-text {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #ccc;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button-group {
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: 2px solid #00c6ff;
+  background-color: transparent;
+  color: #00c6ff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #00c6ff;
+  color: black;
+  box-shadow: 0 0 15px #00c6ff;
+}
+
+.content-section {
+  background-color: #0b0b0b;
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.content-section h2 {
+  color: #00c6ff;
+  margin-bottom: 20px;
+}
+
+.content-section p {
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.contact-section {
+  background-color: #001522;
+  padding: 50px 30px;
+  text-align: center;
+  color: #ddd;
+}
+
+.contact-section h2 {
+  color: #00c6ff;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  max-width: 800px;
+  margin: auto;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.contact-info a {
+  color: #00c6ff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.top-left-brand {
+  position: absolute;
+  top: 20px;
+  left: 35px;
+  display: flex;
+  align-items: center;
+  z-index: 999;
+}
+
+.top-left-brand img {
+  width: 70px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.top-left-brand span {
+  font-style: Fantasy;
+  font-size: 20px;
+  font-weight: bold;
+  color: #00c6ff;
+}
+
+.top-left-brand1 {
+  position: absolute;
+  top: 20px;
+  left: 450px;
+  display: flex;
+  align-items: center;
+  z-index: 999;
+}
+.top-left-brand1 img {
+  width: 70px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.top-left-brand1 span {
+  font-style: Fantasy;
+  font-size: 20px;
+  font-weight: bold;
+  color: #00c6ff;
+}
+</style></head>
+<body>
+  <div class="top-left-brand">
+    <img src="logo.jpg" alt="Logo">
+    <span>GROWTHMATE</span>
+  </div>
+
+  <div id="particles-js"></div>
+
+  <div class="hero-section">
+    <div class="overlay">
+      <h1 class="animated-text">Welcome to our AI Platform</h1>
+      <p class="sub-text">
+        cutting-edge AI-powered interview platform, specially designed to help students prepare for real-world interviews with confidence and ease.
+
+        Our platform simulates real-time interview experiences through advanced Artificial Intelligence, offering face-to-face, text-to-text and voice-to-voice based interactions. Whether you're practicing for a technical round, HR discussion, or group interview — our system provides realistic scenarios to sharpen your skills.
+      </p>
+      <div class="button-group">
+        <a href="student-login.html" class="btn">Student Login</a>
+        <a href="admin-login.html" class="btn">Admin Login</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>About Us</h2>
+    <p>
+      your trusted partner in software innovation and skill development. We are dedicated to creating cutting-edge software solutions and empowering students to excel in the technology sector.
+    </p>
+  </div>
+
+  <div class="contact-section">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <p>skillup@growthmateinfotech.in</p>
+      
+        <p><a href="https://www.growthmateinfotech.in" target="_blank">Growthmate Infotech Software Solution Private Limited.</a></p>
+
+ 
+    
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>console.log("Welcome to the homepage!");
+
+    // Initialize particles.js
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 60, density: { enable: true, value_area: 800 } },
+        color: { value: "#00c6ff" },
+        shape: {
+          type: "circle",
+          stroke: { width: 0, color: "#000000" },
+        },
+        opacity: {
+          value: 0.5,
+          random: true,
+          anim: { enable: false },
+        },
+        size: {
+          value: 4,
+          random: true,
+          anim: { enable: false },
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#00c6ff",
+          opacity: 0.4,
+          width: 1,
+        },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: "none",
+          random: false,
+          straight: false,
+          out_mode: "out",
+        },
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "grab" },
+          onclick: { enable: true, mode: "push" },
+        },
+        modes: {
+          grab: { distance: 140, line_linked: { opacity: 0.5 } },
+          push: { particles_nb: 4 },
+        },
+      },
+      retina_detect: true,
+    });
+    </script>
+</body>
+</html>
